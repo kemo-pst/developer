@@ -1,0 +1,7 @@
+search_files file_glob parameter may not filter reliably - use target='content' with project-specific patterns (e.g. '<project' for Maven, 'import ' for Python) to explore directory structures when terminal is unavailable.
+§
+For the CHSAL XML pipeline, name-part <value> elements should contain only the raw literal text (e.g. <value>Mutassim Billah Abuminyar Qadhafi</value>), not the MultiLanguageText debug string.
+§
+For the CHSAL CSV→input→history→PCE pipeline, target SSID should come from entityauthorityid (falling back to entityid only when entityauthorityid is blank). InputToHistory may drop targets that have only a de-listed modification unless a listed/validFrom marker is also present. CommonDataConverter subtracts one day when writing validTo, so downstream PCE dates can end up one day earlier than the input de-list date. NameConverter must write raw literal name text; never stringify MultiLanguageText objects into NamePart.value.
+§
+In this environment, the GitHub MCP server is configured in Hermes and appears in `hermes mcp list` as enabled via `npx -y @modelcontextprotocol/server-github`. `hermes mcp test github` currently fails with `dictionary update sequence element #0 has length 1; 2 is required`, but running `npx --yes @modelcontextprotocol/server-github --help` starts successfully and prints `GitHub MCP Server running on stdio`.

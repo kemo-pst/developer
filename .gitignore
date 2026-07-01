@@ -1,0 +1,53 @@
+# Secrets
+.env
+.env.*
+!/.gitignore
+
+# Session data
+state.db
+state.db-shm
+state.db-wal
+response_store.db
+sessions/
+
+# Auth
+auth.lock
+pairing/
+auth.json
+
+# Logs
+logs/
+*.log
+
+# Caches
+audio_cache/
+image_cache/
+cache/
+home/
+skills/.usage.json
+skills/.usage.json.lock
+skills/.bundled_manifest
+models_dev_cache.json
+
+# Gateway / runtime state
+gateway.lock
+gateway.pid
+gateway_state.json
+channel_directory.json
+.skills_prompt_snapshot.json
+
+# Temp / state
+cron/output/
+plans/
+hooks/
+skins/
+webui_state/
+sandboxes/
+platforms/
+.curator_backups/
+.curator_state
+.hub/
+
+# OS
+.DS_Store
+Thumbs.db
